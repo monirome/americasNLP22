@@ -12,18 +12,16 @@ pip install hydra-ax-sweeper==1.2
 ##--------------------Install kenlm-------------------------------------------------
 git clone --quiet https://github.com/kpu/kenlm && cd kenlm && mkdir -p build && cd build && cmake .. && make -j 4
 pip install https://github.com/kpu/kenlm/archive/master.zip
-
 ##--------------------Install OpenBLAS---------------------------------------------
 git clone --quiet https://github.com/xianyi/OpenBLAS.git && cd OpenBLAS && mkdir -p build && cd build && \
     cmake .. && make -j 4 && make install
-
 ##--------------------Install fftw-------------------------------------------------
 wget http://www.fftw.org/fftw-3.3.10.tar.gz && tar -xvf fftw-3.3.10.tar.gz && cd fftw-3.3.10 && \
     mkdir build && cd build && cmake .. && make -j 4 && make install -q
-
-##--------------------Install Faairseq---------------------------------------------
+cd..
+##--------------------Install Faairseq--------------------------------------------
 git clone https://github.com/pytorch/fairseq &&
-cp configuration_SLURM/setup.py fairseq/. && \
-cp configuration_SLURM/audio_pretraining.py fairseq/fairseq/tasks/. && \
-cp configuration_SLURM/infer.py fairseq/examples/speech_recognition/. && \
+cp configuration_SLURM/setup.py fairseq/. && 
+cp configuration_SLURM/audio_pretraining.py fairseq/fairseq/tasks/. && 
+cp configuration_SLURM/infer.py fairseq/examples/speech_recognition/. && 
 cd fairseq && pip install --editable .
