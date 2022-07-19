@@ -22,7 +22,7 @@ wget http://www.fftw.org/fftw-3.3.10.tar.gz && tar -xvf fftw-3.3.10.tar.gz && cd
 
 ##--------------------Install Faairseq---------------------------------------------
 git clone https://github.com/pytorch/fairseq &&
-cp docker/setup.py fairseq/. && \
-cp docker/audio_pretraining.py fairseq/fairseq/tasks/. && \
-cp docker/infer.py fairseq/examples/speech_recognition/. && \
+cp configuration_SLURM/setup.py fairseq/. && \
+cp configuration_SLURM/audio_pretraining.py fairseq/fairseq/tasks/. && \
+cp configuration_SLURM/infer.py fairseq/examples/speech_recognition/. && \
 cd fairseq && pip install --editable .
