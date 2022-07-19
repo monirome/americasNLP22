@@ -1,7 +1,7 @@
 #!/bin/bash
 ##----------------------Load apps -------------------------------------
-module load Python FFmpeg libsndfile wget zlib1g liblzma-dev
-##Libsox-fmt-mp3 Libboost-system-dev Libboost-thread-dev Libboost-program-options-dev Libboost-test-dev Libeigen3-dev sox  NO ESTAN EN CESVIMA
+module load Python FFmpeg libsndfile wget
+##zlib1g liblzma-dev Libsox-fmt-mp3 Libboost-system-dev Libboost-thread-dev Libboost-program-options-dev Libboost-test-dev Libeigen3-dev sox  NO ESTAN EN CESVIMA
 ##--------------------Install python libraries-------------------------------------
 ## pip install editdistance NO SE HA PODIDO INSTALAR 
 pip install sentencepiece
