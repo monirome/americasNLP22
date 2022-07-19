@@ -5,7 +5,6 @@ pip install tensorboardX
 pip install tqdm
 pip install jiwer
 pip install hydra-ax-sweeper==1.2
-
 ##--------------------Install kenlm-------------------------------------------------
 git clone --quiet https://github.com/kpu/kenlm && cd kenlm && mkdir -p build && cd build && cmake .. && make -j 4
 pip install https://github.com/kpu/kenlm/archive/master.zip
@@ -24,4 +23,3 @@ cp docker/setup.py fairseq/. && \
 cp docker/audio_pretraining.py fairseq/fairseq/tasks/. && \
 cp docker/infer.py fairseq/examples/speech_recognition/. && \
 cd fairseq && pip install --editable .
-
