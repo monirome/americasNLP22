@@ -6,7 +6,7 @@ LEXICON=${LEXICON:-"/home/u917/PROJECT/lexicon.txt"}
 ############# MODEL  #####################
 #
 #
-MODEL=${MODEL:-"/home/u917/PROJECT/americasnlp/outputs/2022-07-06/checkpoints/checkpoint_best.pt"}
+MODEL=${MODEL:-"/home/u917/PROJECT/outputs/2022-07-06/checkpoints/checkpoint_best.pt"}
 # LM_MODEL=${LM_MODEL:-"/data/IBERSPEECH2022/TEXT_CORPUS/subtitles2018/3gram.binary"}
 # LM_WEIGHT=${LM_WEIGHT:-"0.8896091388773608"}
 WORD_SCORE=${WORD_SCORE:-"0.8891034348782743"}
@@ -17,10 +17,10 @@ BEAM=${BEAM:-"256"}
 #
 ########################################
 
-docker run -it --rm -e NVIDIA_VISIBLE_DEVICES=none --network=host --name "fairseq_test" --shm-size=4g --ulimit memlock=-1 \
--v /home/:/home/ -v /data/:/data/ -w /workspace/fairseq fairseq \
+#docker run -it --rm -e NVIDIA_VISIBLE_DEVICES=none --network=host --name "fairseq_test" --shm-size=4g --ulimit memlock=-1 \
+#-v /home/:/home/ -v /data/:/data/ -w /workspace/fairseq fairseq \
 python3 examples/speech_recognition/infer.py \
-/data/IBERSPEECH2022/ \
+/home/u917/PROJECT/Quechua/train/ \
 --gen-subset ${TEST_NAME} \
 --path ${MODEL} \
 --results-path ${RESULT_PATH} \
