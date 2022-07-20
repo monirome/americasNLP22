@@ -10,12 +10,12 @@ test_name="test_quechua"
 #
 ##############################################################################################
 #nvidia-docker run -it \
-docker run -it --rm -e NVIDIA_VISIBLE_DEVICES=none \
+#docker run -it --rm -e NVIDIA_VISIBLE_DEVICES=none \
 --network=host --name "fairseq_test" --shm-size=4g --ulimit memlock=-1 \
 -v /home/:/home/ -v /data/:/data/ -w /workspace/fairseq \
 fairseq \
 python3 examples/speech_recognition/new/infer.py --multirun \
---config-path=/home/ivan/Iberspeech2022/hydra_search_lm/config1 \
+--config-path=/home/u917/PROJECT/americasnlp/hydra_search_lm/config1 \
 hydra/sweeper=ax \
 task=audio_finetuning \
 common_eval.path=$checkpoint \
