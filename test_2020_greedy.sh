@@ -6,17 +6,17 @@ LEXICON=${LEXICON:-"/home/u917/PROJECT/lexicon.txt"}
 ############# MODEL  #####################
 #
 #
-MODEL=${MODEL:-"/home/u917/PROJECT/americasnlp/outputs/2022-07-06/checkpoints/checkpoint_best.pt"}
+MODEL=${MODEL:-"/home/u917/PROJECT/americasnlp/2022-07-06/checkpoints/checkpoint_best.pt"}
 #
 #
 ########################################
 #
 #docker run -it --rm -e NVIDIA_VISIBLE_DEVICES=none \
-nvidia-docker run -it \
---network=host --name "fairseq_test2020" --shm-size=8g --ulimit memlock=-1 \
--v /home/:/home/ -v /data/:/data/ -w /workspace/fairseq fairseq \
+#nvidia-docker run -it \
+#--network=host --name "fairseq_test2020" --shm-size=8g --ulimit memlock=-1 \
+#-v /home/:/home/ -v /data/:/data/ -w /workspace/fairseq fairseq \
 python3 examples/speech_recognition/infer.py \
-/data/IBERSPEECH2022/TEST_2020/ \
+/home/u917/PROJECT/Quechua/train/ \
 --gen-subset ${TEST_NAME} \
 --path ${MODEL} \
 --results-path ${RESULT_PATH} \
