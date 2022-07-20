@@ -6,7 +6,7 @@ defaults:
 
 task:
  _name: audio_finetuning
- data: /data/IBERSPEECH2022/
+ data: /home/u917/PROJECT/Quechua/train/
  max_sample_size: 560000 #20 seconds (320000/16000)
  min_sample_size: 16000 #2 seconds
  normalize: true
