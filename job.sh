@@ -10,4 +10,4 @@
 #SBATCH --chdir=
 ##------------------------ End job description ------------------------
 
-srun python pyprueba.py
+srun python fairseq/fairseq_cli/hydra_train.py
