@@ -19,7 +19,7 @@ git clone --quiet https://github.com/xianyi/OpenBLAS.git && cd OpenBLAS && mkdir
 ##--------------------Install fftw-------------------------------------------------
 wget http://www.fftw.org/fftw-3.3.10.tar.gz && tar -xvf fftw-3.3.10.tar.gz && cd fftw-3.3.10 && \
     mkdir build && cd build && cmake .. && make -j 4 && make install -q
-cd..
+cd ..
 ##--------------------Install Faairseq--------------------------------------------
 git clone https://github.com/pytorch/fairseq &&
 cp configuration_SLURM/setup.py fairseq/. && 
