@@ -4,10 +4,10 @@
 
 common:
   log_interval: 1 # ####################
-#  fp16: true
+  fp16: true
   log_format: json
   cpu: true
-#  memory_efficient_fp16: false
+  memory_efficient_fp16: false
 #  on_cpu_convert_precision: false
 
 checkpoint:
@@ -21,7 +21,7 @@ task:
   max_sample_size: 400000 #25 seconds (400000/16000)
   min_sample_size: 16000 #1 seconds
   _name: audio_finetuning
-  data: /home/u917/PROJECT/Quechua
+  data: /home/u917/PROJECT
   normalize: true
   labels: ltr
 
