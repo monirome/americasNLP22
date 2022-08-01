@@ -1,10 +1,12 @@
 #!/bin/bash
 ##----------------------Load apps -------------------------------------
-module load Python FFmpeg
-##libsndfile wget DAN ERRORES 
+module load Python FFmpeg libsndfile wge libsndfile
 ##zlib1g liblzma-dev Libsox-fmt-mp3 Libboost-system-dev Libboost-thread-dev Libboost-program-options-dev Libboost-test-dev Libeigen3-dev sox  NO ESTAN EN CESVIMA
 ##--------------------Install python libraries-------------------------------------
-pip install editdistance
+pip install libsndfile1-dev
+pip install libsndfile1
+pip install SoundFile
+pip install editdistance 
 pip install sentencepiece
 pip install tensorboardX
 pip install tqdm
@@ -24,5 +26,4 @@ cd ..
 git clone https://github.com/pytorch/fairseq &&
 cp configuration_SLURM/setup.py fairseq/. && 
 cp configuration_SLURM/audio_pretraining.py fairseq/fairseq/tasks/. && 
-cp configuration_SLURM/infer.py fairseq/examples/speech_recognition/. && 
-cd fairseq && pip install --editable .
+cp configuration_SLURM/infer.py fairseq/examples/speech_recognition/. 
