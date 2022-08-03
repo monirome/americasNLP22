@@ -4,10 +4,10 @@
 
 common:
   log_interval: 1 # ####################
-  fp16: true
+  fp32: true
   log_format: json
   cpu: true
-  memory_efficient_fp16: false
+#  memory_efficient_fp16: false
 #  on_cpu_convert_precision: false
 
 checkpoint:
