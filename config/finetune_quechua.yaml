@@ -4,11 +4,10 @@
 
 common:
   log_interval: 1 # ####################
-  fp32: true
+  fp16: true
   log_format: json
-  cpu: true
-#  memory_efficient_fp16: false
-#  on_cpu_convert_precision: false
+  memory_efficient_fp16: false
+  on_cpu_convert_precision: false
 
 checkpoint:
   save_interval_updates: 1000 # Cada cuanto salvar #######################################################################
