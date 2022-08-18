@@ -20,15 +20,15 @@ task:
   max_sample_size: 560000 #25 seconds (400000/16000)
   min_sample_size: 16000 #1 seconds
   _name: audio_finetuning 
-  data: /home/u917/PROJECT/Quechua/
+  data: /home/u917/PROJECT/guarani/
   normalize: true
   labels: ltr
 
 dataset:
   validate_interval_updates: 1000 # Validar cada 1000 updates #####################################################
-  train_subset: train_quechua # ####################
-#  valid_subset: train_quechua
-  valid_subset: dev_quechua # ####################
+  train_subset: train_guarani # ####################
+#  valid_subset: train_guarani
+  valid_subset: dev_guarani # ####################
   max_tokens: 560000 # 35 seconds
   num_workers: 6
   skip_invalid_size_inputs_valid_test: true
