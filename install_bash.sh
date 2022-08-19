@@ -1,5 +1,6 @@
 #!/bin/bash
 ##----------------------Load apps -------------------------------------
+# See all available modules with: "module avail"
 module load Python FFmpeg libsndfile wget binutils CMake OpenBLAS FFTW Eigen Boost
 ##zlib1g liblzma-dev Libsox-fmt-mp3 Libboost-system-dev Libboost-thread-dev Libboost-program-options libsndfile1-dev
 
