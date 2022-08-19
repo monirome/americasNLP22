@@ -26,7 +26,7 @@ pip install https://github.com/kpu/kenlm/archive/master.zip
 
 ##--------------------Install OpenBLAS---------------------------------------------
 cd ~
-git clone quiet https://github.com/xianyi/OpenBLAS.git && cd OpenBLAS && mkdir -p build && cd build && cmake .. && make -j 4 && make install
+git clone https://github.com/xianyi/OpenBLAS.git && cd OpenBLAS && mkdir -p build && cd build && cmake .. && make -j 4 && make install
 
 ##--------------------Install fftw-------------------------------------------------
 cd ~
