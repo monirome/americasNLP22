@@ -1,6 +1,6 @@
 #!/bin/bash
 ##----------------------Load apps -------------------------------------
-module load Python FFmpeg libsndfile wge libsndfile
+module load Python FFmpeg libsndfile wget libsndfile
 ##zlib1g liblzma-dev Libsox-fmt-mp3 Libboost-system-dev Libboost-thread-dev Libboost-program-options$
 ##--------------------Install python libraries-------------------------------------
 pip install libsndfile1-dev
