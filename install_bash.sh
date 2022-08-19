@@ -1,10 +1,9 @@
 #!/bin/bash
 ## ---------------------Known errors ---------------------------------
-# The following message is shown at the beginning of the installation but it does not affect:
-# "Lmod has detected the following error: These module(s) ... -11.2.0 GCCcore/10.2.0 to see how to load the module(s)."
+# None
 
 ##----------------------Load apps -------------------------------------
-module load Python FFmpeg libsndfile wget binutils CMake OpenBLAS FFTW
+module load Python FFmpeg libsndfile wget binutils CMake OpenBLAS FFTW Eigen Boost
 ##zlib1g liblzma-dev Libsox-fmt-mp3 Libboost-system-dev Libboost-thread-dev Libboost-program-options$
 
 ##--------------------Install python libraries-------------------------------------
