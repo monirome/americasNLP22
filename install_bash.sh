@@ -4,7 +4,7 @@
 # "Lmod has detected the following error: These module(s) ... -11.2.0 GCCcore/10.2.0 to see how to load the module(s)."
 
 ##----------------------Load apps -------------------------------------
-module load Python FFmpeg libsndfile wget binutils CMake
+module load Python FFmpeg libsndfile wget binutils CMake OpenBLAS FFTW
 ##zlib1g liblzma-dev Libsox-fmt-mp3 Libboost-system-dev Libboost-thread-dev Libboost-program-options$
 
 ##--------------------Install python libraries-------------------------------------
@@ -20,23 +20,24 @@ pip install jiwer
 pip install hydra-ax-sweeper==1.2
 
 ##--------------------Install kenlm-------------------------------------------------
-cd ~
 git clone https://github.com/kpu/kenlm && cd kenlm && mkdir -p build && cd build && cmake .. && make -j 4
+cd ..
+cd ..
 pip install https://github.com/kpu/kenlm/archive/master.zip
 
 ##--------------------Install OpenBLAS---------------------------------------------
-cd ~
-git clone https://github.com/xianyi/OpenBLAS.git && cd OpenBLAS && mkdir -p build && cd build && cmake .. && make -j 4 && make install
+## LOADED
+#cd ~
+#git clone https://github.com/xianyi/OpenBLAS.git && cd OpenBLAS && mkdir -p build && cd build && cmake .. && make -j 4 && make install
 
 ##--------------------Install fftw-------------------------------------------------
-cd ~
-wget http://www.fftw.org/fftw-3.3.10.tar.gz && tar -xvf fftw-3.3.10.tar.gz && cd fftw-3.3.10 && \
-    mkdir build && cd build && cmake .. && make -j 4 && make install -q
+# LOADED
+#cd ~
+#wget http://www.fftw.org/fftw-3.3.10.tar.gz && tar -xvf fftw-3.3.10.tar.gz && cd fftw-3.3.10 && \
+#    mkdir build && cd build && cmake .. && make -j 4 && make install -q
 
 
 ##--------------------Install Fairseq--------------------------------------------
-cd ~
-cd americasNLP
 git clone https://github.com/pytorch/fairseq && \
 cp configuration_SLURM/setup.py fairseq/. && \
 cp configuration_SLURM/audio_pretraining.py fairseq/fairseq/tasks/. && \
