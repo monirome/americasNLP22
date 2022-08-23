@@ -13,7 +13,7 @@ pip install tqdm
 pip install jiwer
 pip install hydra-ax-sweeper==1.2
 
-unzip flashlight && cd flashlight/bindings/python && pip install -e . && cd ../../..
+#unzip flashlight && cd flashlight/bindings/python && pip install -e . && cd ../../..
 
 ##--------------------Install kenlm-------------------------------------------------
 git clone https://github.com/kpu/kenlm && cd kenlm && mkdir -p build && cd build && cmake .. && make -j 4 && cd ../..
@@ -25,3 +25,4 @@ cp configuration_SLURM/setup.py fairseq/. && \
 cp configuration_SLURM/audio_pretraining.py fairseq/fairseq/tasks/. && \
 cp configuration_SLURM/infer.py fairseq/examples/speech_recognition/. && \
 cd fairseq && pip install --editable . && cd ..
+
