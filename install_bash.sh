@@ -1,7 +1,7 @@
 #!/bin/bash
 ##----------------------Load apps -------------------------------------
 # See all available modules with: "module avail"
-module load Python PyTorch FFmpeg libsndfile wget binutils CMake OpenBLAS FFTW Eigen Boost
+module load Python PyTorch/1.10.0-foss-2021a-CUDA-11.3.1 FFmpeg libsndfile wget binutils CMake OpenBLAS FFTW Eigen Boost CUDA/11.3.1
 ##zlib1g liblzma-dev Libsox-fmt-mp3 Libboost-system-dev Libboost-thread-dev Libboost-program-options libsndfile1-dev
 
 ##--------------------Install python libraries-------------------------------------
