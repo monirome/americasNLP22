@@ -6,7 +6,7 @@ common:
   log_interval: 1 # ####################
   fp16: true
   log_format: json
-  memory_efficient_fp16: false
+  memory_efficient_fp16: true
   on_cpu_convert_precision: false
 
 checkpoint:
@@ -57,6 +57,7 @@ lr_scheduler:
 model:
   freeze_finetune_updates: 3000 # FREEZE UPDATES. ENTRE 30% y 50% ## Objetivo un 40%
   _name: wav2vec_ctc
+  #w2v_path: /home/u917/PROJECT/americasNLP/MODELS_W2V2/xlsr2_960m_1000k.pt
   w2v_path: /home/u917/PROJECT/americasNLP/MODELS_W2V2/xlsr2_300m.pt
   apply_mask: true
   mask_prob: 0.25 # Original 0.25 Between 0.3 and 0.75
