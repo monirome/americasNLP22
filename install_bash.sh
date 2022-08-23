@@ -13,7 +13,7 @@ pip install tqdm
 pip install jiwer
 pip install hydra-ax-sweeper==1.2
 
-#unzip flashlight && cd flashlight/bindings/python && pip install -e .
+unzip flashlight && cd flashlight/bindings/python && pip install -e .
 
 ##--------------------Install kenlm-------------------------------------------------
 git clone https://github.com/kpu/kenlm && cd kenlm && mkdir -p build && cd build && cmake .. && make -j 4 && cd ../..
