@@ -20,7 +20,7 @@ task:
   max_sample_size: 560000 #25 seconds (400000/16000)
   min_sample_size: 16000 #1 seconds
   _name: audio_finetuning 
-  data: /home/u917/PROJECT/Quechua/
+  data: /home/u229/u229765/americasNLP/DATA/Quechua
   normalize: true
   labels: ltr
 
