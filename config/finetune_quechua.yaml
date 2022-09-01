@@ -6,7 +6,7 @@ common:
   log_interval: 1 # ####################
   fp16: true
   log_format: json
-  memory_efficient_fp16: true
+  memory_efficient_fp16: false
   on_cpu_convert_precision: false
 
 checkpoint:
@@ -17,19 +17,18 @@ checkpoint:
   save_interval: 500 # Cada cuantas epocas salvar
 
 task:
-  max_sample_size: 560000 #25 seconds (400000/16000)
-  min_sample_size: 16000 #1 seconds
+  max_sample_size: 960000 #60 seconds (400000/16000)
+  min_sample_size: 8000 #0.5 seconds
   _name: audio_finetuning 
-  data: /home/u229/u229765/americasNLP/DATA/Quechua
+  data: /home/u229/u229765/DATA/AMERICAS/Quechua
   normalize: true
   labels: ltr
 
 dataset:
   validate_interval_updates: 1000 # Validar cada 1000 updates #####################################################
   train_subset: train_quechua # ####################
-#  valid_subset: train_quechua
   valid_subset: dev_quechua # ####################
-  max_tokens: 2240000 # 35 seconds
+  max_tokens: 960000 # 35 seconds
   num_workers: 6
   skip_invalid_size_inputs_valid_test: true
   validate_interval: 1000 # Cada X EPOCAS validar
@@ -39,7 +38,7 @@ criterion:
   zero_infinity: true
 
 optimization:
-  max_update: 10000 #MAX UPDATES  #######################################################################
+  max_update: 50000 #MAX UPDATES  #######################################################################
   lr: [0.0001] # 0.00005, 0.0003]
   sentence_avg: true
   update_freq: [1]
@@ -55,7 +54,7 @@ lr_scheduler:
   final_lr_scale: 0.05
 
 model:
-  freeze_finetune_updates: 3000 # FREEZE UPDATES. ENTRE 30% y 50% ## Objetivo un 40%
+  freeze_finetune_updates: 10000 # FREEZE UPDATES. ENTRE 30% y 50% ## Objetivo un 40%
   _name: wav2vec_ctc
   w2v_path: /home/u229/u229765/DATA/xlsr2_300m.pt
   apply_mask: true
