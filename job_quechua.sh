@@ -3,7 +3,8 @@
 #SBATCH --partition=standard
 #SBATCH --job-name=prueba_job_monica.job
 #SBATCH --ntasks=1
-#SBATCH --mem-per-cpu=100gb
+#SBATCH --cpus-per-task=8
+#SBATCH --mem-per-cpu=5gb
 #SBATCH --partition=standard-gpu
 #SBATCH --gres=gpu:a100 
 ##SBATCH --mail-type=ALL
