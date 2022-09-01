@@ -56,8 +56,8 @@ lr_scheduler:
 model:
   freeze_finetune_updates: 10000 # FREEZE UPDATES. ENTRE 30% y 50% ## Objetivo un 40%
   _name: wav2vec_ctc
-  w2v_path: /home/u229/u229765/DATA/xlsr2_300m.pt
-#  w2v_path: /home/u229/u229765/DATA/xlsr2_960m_1000k.pt
+#  w2v_path: /home/u229/u229765/DATA/xlsr2_300m.pt
+  w2v_path: /home/u229/u229765/DATA/xlsr2_960m_1000k.pt
 #  w2v_path: /home/u229/u229765/DATA/xlsr2_2B_1000k.pt
   apply_mask: true
   mask_prob: 0.25 # Original 0.25 Between 0.3 and 0.75
