@@ -2,18 +2,12 @@
 
 We work with SLURM is an open source, fault-tolerant, and highly scalable cluster management and job scheduling system for large and small Linux clusters. 
 
-Como tengo organizado el cesvima... dentro de la carpeta PROJECT estan: 
-- americasNLP: aqui es donde tengo clonado este respositorio de github
-- Quechua: estan los audios de este idioma, manifest y archivos necesarios para fairseq y el script file.py que es el que los genera. 
-- bribri: ...
-- guarani: ...
-- kotiria: ...
-- waikhana: ...
+This repository contains an example of the BriBri language, it is analogous for the rest of the languages. 
 
-------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------
 
-1. Cargar datos de los idiomas. En cada una de las carpetas de idiomas añadir el script de python files.py donde se generan los archivos train y dev. [este archivo no se encuentra en el repositorio es adhoc] 
-2. Ejecutar install_bash.sh . Este instala las apps y librerias de python necesarias, kenlm, OpenBLAS, fftw y fairseq 
-3. Revisar dentro de config las rutas de cada uno de los finetuning_XXX.yaml
-4. Ejecutar un job_XXX.sh 
+- config: contains the file bribri.yaml . This is the hyperparameters configuration for the wav2vec2 model. 
+- install_bash.sh: install necessary modules on the server for training.
+- job_bribri.sh: launches a bribri language training.
+
 
