@@ -2,7 +2,7 @@
 
 We work with SLURM is an open source, fault-tolerant, and highly scalable cluster management and job scheduling system for large and small Linux clusters. 
 
-This repository contains an example of the BriBri language, it is analogous for the rest of the languages. 
+This repository contains an example of the Bribri language, it is analogous for the rest of the languages. 
 
 -----------------------------------------------------------------------------------------------------------
 
